@@ -1,12 +1,12 @@
 'use client';
 
-import GoodTaskForm from "@/components/GoodTaskForm/GoodTaskForm";
+import GoodNotesForm from "@/components/GoodNotesForm/GoodNotesForm";
 
 const GoodFormsPage = () => {
   return (
     <div>
         <h1>GoodFormPage</h1>
-        <GoodTaskForm />
+        <GoodNotesForm />
     </div>
   )
 }
