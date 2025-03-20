@@ -1,7 +1,10 @@
+import NotesForm from "@/components/NotesForm/NotesForm"
+
 const TryFormPage = () => {
   return (
-    <div>TryFormPage</div>
-    // Formのコンポーネント配置
+    <div>
+        <NotesForm backgroundColor='bg-green-300'/>
+    </div>
   )
 }
 

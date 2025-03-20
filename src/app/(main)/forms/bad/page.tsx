@@ -1,7 +1,10 @@
+import NotesForm from "@/components/NotesForm/NotesForm"
+
 const BadFormsPage = () => {
   return (
-    <div>BadFormPage</div>
-    // Formのコンポーネント配置
+    <div>
+        <NotesForm backgroundColor='bg-red-300'/>
+    </div>
   )
 }
 

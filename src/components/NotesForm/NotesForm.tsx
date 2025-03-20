@@ -1,21 +1,23 @@
 import { submitForm } from '@/actions/notes'
 import React from 'react'
 import Sticky from '../Sticky/Sticky'
+import SubmitButton from '../Button/SubmitButton';
 
-const GoodNotesForm = () => {
+interface notesProps {
+  backgroundColor: string;
+}
+
+const NotesForm: React.FC<notesProps> = ({
+  backgroundColor
+}) => {
   const numberOfStickies = 12;
-  const SubmitButton = () => {
-    return (
-        <button type="submit">ボタン</button>
-    )
-  }
 
   return (
     <div>
         <form action={submitForm}>
             <div className='grid grid-cols-4 gap-4 p-4'>
               {Array.from({ length: numberOfStickies}, (_, index) => (
-                  <Sticky key={index} />
+                  <Sticky key={index} backgroundColor={backgroundColor}/>
               ))}
             </div>
             <SubmitButton />
@@ -24,4 +26,4 @@ const GoodNotesForm = () => {
   )
 }
 
-export default GoodNotesForm
+export default NotesForm

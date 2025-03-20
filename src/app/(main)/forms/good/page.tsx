@@ -1,12 +1,11 @@
 'use client';
 
-import GoodNotesForm from "@/components/GoodNotesForm/GoodNotesForm";
+import NotesForm from "@/components/NotesForm/NotesForm";
 
 const GoodFormsPage = () => {
   return (
     <div>
-        <h1>GoodFormPage</h1>
-        <GoodNotesForm />
+        <NotesForm backgroundColor='bg-yellow-300'/>
     </div>
   )
 }

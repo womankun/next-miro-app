@@ -8,7 +8,7 @@ const MainLayout = ({
   return (
     <div className='flex min-h-screen'>
       <SideMenu />
-      <main className='bg-white flex-1 over-flow-auto'>{children}</main>
+      <main className='ml-56 bg-white flex-1 over-flow-auto'>{children}</main>
     </div>
   );
 }

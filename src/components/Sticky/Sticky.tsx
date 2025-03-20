@@ -2,7 +2,13 @@
 
 import React, { useState } from 'react'
 
-const Sticky = () => {
+interface StickyProps {
+  backgroundColor: string;
+}
+
+const Sticky: React.FC<StickyProps> = ({
+    backgroundColor
+}) => {
   const [text, setText] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -13,9 +19,9 @@ const Sticky = () => {
   }
 
   return (
-    <div className='bg-yellow-300 p-4 rounded-lg shadow-lg w-48 h-48'>
+    <div className={`${backgroundColor} bg-yellow-300 p-4 rounded-lg shadow-lg w-48 h-48`}>
         <textarea 
-          className='bg-yellow-300 w-full h-full resize-none overflow-hidden p-2 rounded-lg focus:outline-none'
+          className={`${backgroundColor} bg-yellow-300 w-full h-full resize-none overflow-hidden p-2 rounded-lg focus:outline-none`}
           value={text}
           onChange={handleChange}
         />
